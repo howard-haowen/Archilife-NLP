@@ -13,7 +13,9 @@
   + `gensim`
   + `scattertext`
 
-> 每一張圖表裡的文字都可以點選喔 :wink:
+::: 
+每一張圖表裡的文字都可以點選喔  :wink:
+:::
 
 ### 中文文本的分析結果
 - __[詞頻](https://haowen-howard.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)__ - 文類1 vs. 文類2
