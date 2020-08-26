@@ -13,9 +13,8 @@
   + `gensim`
   + `scattertext`
 
-::: 
+---
 每一張圖表裡的文字都可以點選，也可以搜尋喔 :wink: 
-:::
 
 ### 中文文本的分析結果
 - __[所有詞](https://haowen-howard.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)__ - 文類1 vs. 文類2
