@@ -1,9 +1,7 @@
 ## Scattertext文本分析視覺化呈現
 
-+ 目的：練習基本NLP分析，並將結果以[`Scattertext`](https://github.com/JasonKessler/scattertext)呈現。
-+ 文本來源：
-
-+ 結果：互動式視覺圖，點選每個
++ 目的：為了在[祐生基金會](https://www.archilife.org)報告[Text Analytics with Python: A Practical Real-World Approach to Gaining Actionable Insights from your Data](https://www.amazon.com/Text-Analytics-Python-Real-World-Actionable/dp/148422387X)，實作了一遍書中介紹的各種NLP操作，並將結果以[`Scattertext`](https://github.com/JasonKessler/scattertext)呈現。
++ 文本來源：祐生基金會的例行活動紀錄文，包含'國政聯誼會'及'見識之旅'兩種文類，共110篇。文本包含中文原文及英文譯文。
 
 ### 中文文本的分析結果
 - __[詞頻](https://haowen-howard.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)__ - 文類1 vs. 文類2
