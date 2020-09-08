@@ -2,14 +2,16 @@
 
 ## 目錄
   * [前言](#前言)
+    + [目的](#目的)
+    + [主要工具](#主要工具)
+    + [文本來源](#文本來源)
+    + [文本預處理](#文本預處理)
   * [靜態可視化](#靜態可視化)
     + [依據中文文本](#依據中文文本)
     + [依據英文文本](#依據英文文本)
   * [動態可視化](#動態可視化)
     + [依據中文文本](#依據中文文本-1)
     + [依據英文文本](#依據英文文本-1)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 前言
 + 目的：為了在[祐生基金會](https://www.archilife.org)報告[Text Analytics with Python: A Practical Real-World Approach to Gaining Actionable Insights from your Data](https://www.amazon.com/Text-Analytics-Python-Real-World-Actionable/dp/148422387X)，實作了一遍書中介紹的各種NLP操作，並將結果以視覺化的圖表呈現。由於原作者已經提供了完整[程式碼](https://github.com/dipanjanS/text-analytics-with-python)，這裡就只簡單記錄一些結果以及書上沒提到的套件。
@@ -78,7 +80,7 @@ for item in tr4s.get_key_sentences(num=5):
 ```
 這裡的text就是上面的`9月份見識之旅`，執行之後得到：
 
-    // 關鍵詞：
+    關鍵詞：
     後 0.027962039363435023
     地震 0.022010169581731007
     於 0.014880799653226645
@@ -118,8 +120,13 @@ for item in tr4s.get_key_sentences(num=5):
 以相同的文件來說，`TextRank`的摘要結果比`textrank4zh` 還要好，前者抓到了事件的起承轉合，後者則是拘泥於事件的細節。導致兩者差異的原因留待日後進一步了解。
   
 ### 依據英文文本
-- __文本類別分佈__ - 使用PCA將文本向量降至2維，這裡的類別是文本實際的類別（`國政聯誼會` = Meeting， `見識之旅` = Trip）
-![PCA](https://haowen-howard.github.io/Archilife-NLP/PCA%20Archilife%20events.png)
+- __文本類別分佈(2D)__ - 將文本向量的特徵限縮至2個，顏色代表文本的實際類別
+---
+![2Dtfdf](https://haowen-howard.github.io/Archilife-NLP/2_features_from_tfidf_EN.png)
+- __文本類別分佈(3D)__ - 將文本向量的特徵限縮至3個，顏色代表文本的實際類別，呈現25種角度
+---
+![3Dtfdf](https://haowen-howard.github.io/Archilife-NLP/3_features_from_tfidf_EN.png)
+
 
 ## 動態可視化
 ---
