@@ -23,12 +23,16 @@
 
 ### 依據中文文本
 - __文本類別分佈__ - 使用PCA將文本向量降至2維，這裡的類別是文本實際的類別（`國政聯誼會` = Meeting， `見識之旅` = Trip）
+---
 ![PCA](https://haowen-howard.github.io/Archilife-NLP/PCA%20Archilife%20events.png)
-- __文本聚類分佈__ - 使用Kmeans計算文本向量之間的距離，預先設定2個聚類中心，這裡的類別是根據Kmeans計算出來的類別(即`0` 或 `1`)
+- __文本聚類分佈__ - 使用Kmeans計算文本向量之間的距離，預先設定2個聚類中心，這裡的類別是根據Kmeans計算出來的類別（即`0` 或 `1`）
+---
 ![Kmeans](https://haowen-howard.github.io/Archilife-NLP/Kmeans%20Archilife%20events.png)
 - __文本相似度__ - 使用餘弦相似性計算語料庫內的文本相似度，樹狀圖末梢標示文本事件的年、月以及文本類型（`國政聯誼會` = M， `見識之旅` = T）
+---
 ![DocSim](https://haowen-howard.github.io/Archilife-NLP/Similarity%20across%20documents%20in%20the%20corpus_dendrogram.png)
 - __句子相似度__ - 使用餘弦相似性計算單一文本內的句子相似度，每個節點代表一個句子。後續導入`PageRank`，設定句子數量後即獲得文本摘要
+---
 ![SentSim](https://haowen-howard.github.io/Archilife-NLP/Similarity%20across%20sentences%20in%20a%20document_network.png)
 
 ### 依據英文文本
