@@ -1,4 +1,4 @@
-## 自然語言處理視覺化呈現
+## 自然語言處理可視化
 
 + 目的：為了在[祐生基金會](https://www.archilife.org)報告[Text Analytics with Python: A Practical Real-World Approach to Gaining Actionable Insights from your Data](https://www.amazon.com/Text-Analytics-Python-Real-World-Actionable/dp/148422387X)，實作了一遍書中介紹的各種NLP操作，並將結果以視覺化的圖表呈現。
 
@@ -19,16 +19,24 @@
   + 中文斷詞跟NER都使用`fastHan`，斷詞風格依據中研院`as`
   + 英文斷詞跟NER都使用`spaCy`
 
+## 靜態可視化
+
+### 依據中文文本
+- __![文本類別分佈](https://haowen-howard.github.io/Archilife-NLP/PCA%20Archilife%20events.png)__ - 使用PCA將文本向量降階，這裡的類別是文本實際的類別（即`國政聯誼會` 或 `見識之旅`）
+- __![文本聚類分佈](https://haowen-howard.github.io/Archilife-NLP/Kmeans%20Archilife%20events.png)__ - 使用Kmeans計算文本向量之間的距離，預先設定2個聚類中心，這裡的類別是根據Kmeans計算出來的類別(即`0` 或 `1`)
+
+
+## 動態可視化
 ---
 每一張圖表裡的文字都可以點選，也可以搜尋喔 :wink: 
 
-### 中文文本的分析結果
+### 依據中文文本
 - __[所有詞](https://haowen-howard.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)__ - 文類1 vs. 文類2
 - __[所有詞](https://haowen-howard.github.io/Archilife-NLP/term_characteristic_fromCH_CleanTokens.html)__ - 特徵詞 vs. 文類
 - __[命名實體詞](https://haowen-howard.github.io/Archilife-NLP/NER_scattertext_fromCH_NER_Label.html)__ - 文類1 vs. 文類2
 - __[命名實體詞](https://haowen-howard.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)__ - 特徵詞 vs. 文類
 
-### 英文文本的分析結果
+### 依據英文文本
 - __[所有詞](https://haowen-howard.github.io/Archilife-NLP/term_scattertext_fromEN.html.html)__ - 文類1 vs. 文類2
 - __[所有詞](https://haowen-howard.github.io/Archilife-NLP/term_characteristic_fromEN.html)__ - 特徵詞 vs. 文類
 - __[命名實體詞](https://haowen-howard.github.io/Archilife-NLP/NER_scattertext_fromEN_NER_Label.html)__ - 文類1 vs. 文類2
