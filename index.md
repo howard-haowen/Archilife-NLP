@@ -1,5 +1,17 @@
-## 自然語言處理可視化
+# 自然語言處理可視化
 
+## 目錄
+  * [前言](#前言)
+  * [靜態可視化](#靜態可視化)
+    + [依據中文文本](#依據中文文本)
+    + [依據英文文本](#依據英文文本)
+  * [動態可視化](#動態可視化)
+    + [依據中文文本](#依據中文文本-1)
+    + [依據英文文本](#依據英文文本-1)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+## 前言
 + 目的：為了在[祐生基金會](https://www.archilife.org)報告[Text Analytics with Python: A Practical Real-World Approach to Gaining Actionable Insights from your Data](https://www.amazon.com/Text-Analytics-Python-Real-World-Actionable/dp/148422387X)，實作了一遍書中介紹的各種NLP操作，並將結果以視覺化的圖表呈現。由於原作者已經提供了完整[程式碼](https://github.com/dipanjanS/text-analytics-with-python)，這裡就只簡單記錄一些結果以及書上沒提到的套件。
 
 + 主要工具：
