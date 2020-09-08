@@ -1,4 +1,4 @@
-# 自然語言處理(NLP)可視化(visualization)
+# 自然語言處理可視化(NLP visualization demo)
 
 ## 目錄
   * [前言](#前言)
