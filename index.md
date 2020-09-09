@@ -38,7 +38,7 @@
 ## 靜態可視化
 
 ### 依據中文文本
-- __文本類別分佈__ - 使用PCA將文本向量降至2維，這裡的類別是文本實際的類別（`國政聯誼會` = Meeting， `見識之旅` = Trip）
+- 文本類別分佈：使用PCA將文本向量降至2維，這裡的類別是文本實際的類別（`國政聯誼會` = Meeting， `見識之旅` = Trip）
 ---
 ![PCA](https://haowen-howard.github.io/Archilife-NLP/PCA%20Archilife%20events.png)
 
