@@ -38,15 +38,18 @@
 ## 靜態可視化
 
 ### 依據中文文本
-- 文本類別分佈：使用PCA將文本向量降至2維，這裡的類別是文本實際的類別（`國政聯誼會` = Meeting， `見識之旅` = Trip）
+- __文本類別分佈__ - 使用PCA將文本向量降至2維，這裡的類別是文本實際的類別（`國政聯誼會` = Meeting， `見識之旅` = Trip）
 ---
 ![PCA](https://haowen-howard.github.io/Archilife-NLP/PCA%20Archilife%20events.png)
+
 - 文本聚類分佈：使用Kmeans計算文本向量之間的距離，預先設定2個聚類中心，這裡的類別是根據Kmeans計算出來的類別（即`0` 或 `1`）
 ---
 ![Kmeans](https://haowen-howard.github.io/Archilife-NLP/Kmeans%20Archilife%20events.png)
+
 - 文本相似度：使用餘弦相似性計算語料庫內的文本相似度，樹狀圖末梢標示文本事件的年、月以及文本類型（`國政聯誼會` = M， `見識之旅` = T）
 ---
 ![DocSim](https://haowen-howard.github.io/Archilife-NLP/Similarity%20across%20documents%20in%20the%20corpus_dendrogram.png)
+
 - 句子相似度：使用餘弦相似性計算單一文本內的句子相似度，每個節點代表一個句子（共`16`）。後續導入`TextRank`，設定句子數量（例如`5`）後即獲得文本摘要
 ---
 ![SentSim](https://haowen-howard.github.io/Archilife-NLP/Similarity%20across%20sentences%20in%20a%20document_network.png)
@@ -56,6 +59,7 @@
   
   - 摘要文本
   > 9月份見識之旅活動，於2019年9月21日由呂明澐小姐帶領12位祐生見習生及其家長們，進行桃園侏儸紀寶石教室暨防災教育體驗之旅。活動開始之初，領隊呂明澐小姐提醒本次活動注意事項及觀察重點，先行建立見習生的背景知識。導覽人員首先解說寶石生成的環境要件及各式寶石的特徵和產地，其中紅色尖晶石與紅剛玉外觀相似，過去常被誤認，英國皇家王冠上的黑王子紅寶石後被證實為紅色尖晶石即案例之一。導覽人員藉由互動式模型解釋颱風、地震及土石流等天災發生的成因。參訪當天為921大地震20周年，導覽人員特別提醒地震避難時應記住「趴下」、「掩護」、「穩住」三大步驟，找到適當躲避地點後應以雙手護住頭及頸椎趴跪於地面，隨即於地震體驗平台實地練習，以備往後地震避難時之需。
+  
 ---
 後記：後來發現有`textrank4zh` 這個套件，專門處理中文摘要。使用`TextRank`需要事先斷句、斷詞，而`textrank4zh` 的好處是直接餵入原始文本，就能獲得關鍵詞、關鍵短語、摘要。例如：
 
