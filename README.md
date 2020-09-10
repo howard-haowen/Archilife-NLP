@@ -29,7 +29,12 @@
 ### 文本來源
 祐生基金會的例行活動公開紀錄文，包含 `國政聯誼會` 57篇及 `見識之旅` 44篇，兩種文類合計 **101** 篇。文本包含中文原文及英文譯文。
   + 按[文章分類](https://github.com/howard-haowen/Archilife-NLP/blob/master/DataFrame_by_articles_101rows.pkl)，共101個資料點
+  ---
+![df_articles](https://howard-haowen.github.io/Archilife-NLP/Dataframe_per_articles.webarchive)
+
   + 按[段落分類](https://github.com/howard-haowen/Archilife-NLP/blob/master/DataFrame_by_paragraphs_412rows.pkl)，共412個資料點
+  ---
+![df_paras](https://howard-haowen.github.io/Archilife-NLP/Dataframe_per_paragraphs.webarchive)
 
 ### 文本預處理
   + 中文斷詞跟NER都使用`fastHan`，斷詞風格依據中研院`as`
