@@ -219,6 +219,7 @@ word_vectors_tsne = tsne.fit_transform(word_vectors)
 print('t-SNE done! Time elapsed: {} seconds'.format(time.time()-time_start))
 ```
 運行結果為：
+```
     [t-SNE] Computing 121 nearest neighbors...
     [t-SNE] Indexed 1000 samples in 0.004s...
     [t-SNE] Computed neighbors for 1000 samples in 0.074s...
@@ -227,7 +228,7 @@ print('t-SNE done! Time elapsed: {} seconds'.format(time.time()-time_start))
     [t-SNE] KL divergence after 250 iterations with early exaggeration: 50.374985
     [t-SNE] KL divergence after 300 iterations: 0.505594
     t-SNE done! Time elapsed: 8.125535249710083 seconds
-
+```
 同樣將word_vectors_tsne標準化之後，拿著word_vectors_tsne[:, 0]、word_vectors_tsne[:, 1]跟words這三個參數就可以繪圖了！
 
 ### 依據英文文本
