@@ -18,13 +18,13 @@
 為了在[祐生基金會](https://www.archilife.org)報告[Text Analytics with Python: A Practical Real-World Approach to Gaining Actionable Insights from your Data](https://www.amazon.com/Text-Analytics-Python-Real-World-Actionable/dp/148422387X)，實作了一遍書中介紹的各種NLP操作，並將結果以視覺化的圖表呈現。由於原作者已經提供了完整[程式碼](https://github.com/dipanjanS/text-analytics-with-python)，這裡就只簡單記錄一些結果以及書上沒提到的套件。
 
 ### 主要工具
-  + `pandas`
   + `NLTK`
   + `scikit-learn`
   + `spaCy`
   + `gensim`
-  + `scattertext`
   + `fastHan`
+  + `scattertext`
+  + `bokeh`
 
 ### 文本來源
 祐生基金會的例行活動公開紀錄文，包含 `國政聯誼會` 57篇及 `見識之旅` 44篇，兩種文類合計 **101** 篇。文本包含中文原文及英文譯文。
