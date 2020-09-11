@@ -170,9 +170,9 @@ for item in tr4s.get_key_sentences(num=5):
 ---
 [![CH_NER_words__characteristics](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_NER_words_characteristics.png)](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)
 
-- __[前1000高頻詞](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)__ - 用`gensim` 的Word2Vec模型訓練文本，獲得32階的向量，取高頻的前1000詞，再用PCA降階之後用 `bokeh` 繪圖。
+- __[前1000高頻詞，PCA降階](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)__ - 用`gensim` 的Word2Vec模型訓練文本，獲得32階的向量，取高頻的前1000詞，再用PCA降階之後用 `bokeh` 繪圖。
 ---
-[![top1000_word2vec](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/top1000_word2vec.png)](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)
+[![top1000_word2vec](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/top1000_word2vec_pca.png)](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)
 
 具體設定如下：
 ```python
@@ -204,6 +204,31 @@ preprocessing.scale(word_vectors_pca) #標準化，達到zero mean跟unit varian
 
 #拿著word_vectors_pca[:, 0]、word_vectors_pca[:, 1]跟words這三個參數就可以繪圖了！
 ```
+- __[前1000高頻詞，t-SNE降階](https://howard-haowen.github.io/Archilife-NLP/word2vec_tsne_most_frequent_1000tokens.html)__ - 用`gensim` 的Word2Vec模型訓練文本，獲得32階的向量，取高頻的前1000詞，再用t-SNE降階之後用 `bokeh` 繪圖。
+---
+[![top1000_word2vec](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/top1000_word2vec_tsne.png)](https://howard-haowen.github.io/Archilife-NLP/word2vec_tsne_most_frequent_1000tokens.html)
+
+設定跟上面一樣，只是把PCA換成t-SNE，具體程式碼如下：
+```python
+from sklearn.manifold import TSNE
+import time
+
+time_start = time.time()
+tsne = TSNE(n_components=2, verbose=1, perplexity=40, n_iter=300) #降至2階
+word_vectors_tsne = tsne.fit_transform(word_vectors)
+print('t-SNE done! Time elapsed: {} seconds'.format(time.time()-time_start))
+```
+運行結果為：
+    [t-SNE] Computing 121 nearest neighbors...
+    [t-SNE] Indexed 1000 samples in 0.004s...
+    [t-SNE] Computed neighbors for 1000 samples in 0.074s...
+    [t-SNE] Computed conditional probabilities for sample 1000 / 1000
+    [t-SNE] Mean sigma: 0.043001
+    [t-SNE] KL divergence after 250 iterations with early exaggeration: 50.374985
+    [t-SNE] KL divergence after 300 iterations: 0.505594
+    t-SNE done! Time elapsed: 8.125535249710083 seconds
+
+同樣將word_vectors_tsne標準化之後，拿著word_vectors_tsne[:, 0]、word_vectors_tsne[:, 1]跟words這三個參數就可以繪圖了！
 
 ### 依據英文文本
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromEN.html)__ - 文類1 vs. 文類2
