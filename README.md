@@ -151,16 +151,62 @@ for item in tr4s.get_key_sentences(num=5):
 
 ## 動態可視化
 ---
-每一張圖表裡的文字都可以點選，也可以搜尋喔 :wink: 
+點選圖表另開視窗，就可以跟文本互動囉！ :wink: 
 
 ### 依據中文文本
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)__ - 文類1 vs. 文類2
+---
+[![CH_all_words_text_classes](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_all_words_text_classes.png)](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)
+
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_characteristic_fromCH_CleanTokens.html)__ - 特徵詞 vs. 文類
+---
+[![CH_all_words_characteristics](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_all_words_characteristics.png)](https://howard-haowen.github.io/Archilife-NLP/term_characteristic_fromCH_CleanTokens.html)
+
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_scattertext_fromCH_NER_Label.html)__ - 文類1 vs. 文類2
+---
+[![CH_NER_words_text_classes](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_NER_words_text_classes.png)](https://howard-haowen.github.io/Archilife-NLP/NER_scattertext_fromCH_NER_Label.html)
+
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)__ - 特徵詞 vs. 文類
+---
+[![CH_NER_words__characteristics](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_NER_words_characteristics.png)](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)
+
+- __[前1000高頻詞](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)__ - 用`gensim` 的Word2Vec模型訓練文本，獲得32階的向量，取高頻的前1000詞，再用PCA降階之後用 `bokeh` 繪圖。
+---
+[![top1000_word2vec](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/top1000_word2vec.png)](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)
+
+具體設定如下：
+```python
+from gensim.models import Word2Vec
+from sklearn.decomposition import PCA
+from sklearn import preprocessing
+import numpy as np
+
+model = Word2Vec(data_tok, 
+                 size=32,      # 設定維度
+                 min_count=5,  # 限制最低詞頻
+                 window=5).wv  # 訓練視窗
+                 
+words = sorted(model.vocab.keys(), 
+               key=lambda word: model.vocab[word].count,
+               reverse=True)[:1000] #取前10000高頻詞
+
+word_vectors = np.array([model.get_vector(w) for w in words]) #將10000詞轉向量
+
+# 確定參數格式正確
+assert isinstance(word_vectors, np.ndarray)
+assert word_vectors.shape == (len(words), 32) #10000詞，每個詞32階
+assert np.isfinite(word_vectors).all()
+
+pca = PCA(n_components=2) #降至2階
+word_vectors_pca = pca.fit_transform(word_vectors)
+
+preprocessing.scale(word_vectors_pca) #標準化，達到zero mean跟unit variance
+
+#拿著word_vectors_pca[:, 0]、word_vectors_pca[:, 1]跟words這三個參數就可以繪圖了！
+```
 
 ### 依據英文文本
-- __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromEN.html.html)__ - 文類1 vs. 文類2
+- __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromEN.html)__ - 文類1 vs. 文類2
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_characteristic_fromEN.html)__ - 特徵詞 vs. 文類
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_scattertext_fromEN_NER_Label.html)__ - 文類1 vs. 文類2
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromEN_NER_Label.html)__ - 特徵詞 vs. 文類
