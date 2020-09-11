@@ -151,10 +151,13 @@ for item in tr4s.get_key_sentences(num=5):
 
 ## 動態可視化
 ---
-每一張圖表裡的文字都可以點選，也可以搜尋喔 :wink: 
+點選圖表另開視窗，就可以跟文本互動囉！ :wink: 
 
 ### 依據中文文本
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)__ - 文類1 vs. 文類2
+---
+[![CH_all_words_text_classes](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_all_words_text_classes.png)](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)
+
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_characteristic_fromCH_CleanTokens.html)__ - 特徵詞 vs. 文類
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_scattertext_fromCH_NER_Label.html)__ - 文類1 vs. 文類2
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)__ - 特徵詞 vs. 文類
