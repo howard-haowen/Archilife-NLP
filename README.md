@@ -202,7 +202,7 @@ word_vectors_pca = pca.fit_transform(word_vectors)
 
 preprocessing.scale(word_vectors_pca) #標準化，達到zero mean跟unit variance
 
-#拿著word_vectors_pca[:, 0], word_vectors_pca[:, 1], 跟words就可以繪圖了！
+#拿著word_vectors_pca[:, 0]、word_vectors_pca[:, 1]跟words這三個參數就可以繪圖了！
 ```
 
 ### 依據英文文本
