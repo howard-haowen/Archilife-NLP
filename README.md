@@ -15,7 +15,12 @@
 
 ## 前言
 ### 目的
-為了在[祐生基金會](https://www.archilife.org)報告[Text Analytics with Python: A Practical Real-World Approach to Gaining Actionable Insights from your Data](https://www.amazon.com/Text-Analytics-Python-Real-World-Actionable/dp/148422387X)，實作了一遍書中介紹的各種NLP操作，並將結果以視覺化的圖表呈現。由於原作者已經提供了完整[程式碼](https://github.com/dipanjanS/text-analytics-with-python)，這裡就只簡單記錄一些結果以及書上沒提到的套件。
+為了在[祐生基金會](https://www.archilife.org)報告[Text Analytics with Python: A Practical Real-World Approach to Gaining Actionable Insights from your Data](https://www.amazon.com/Text-Analytics-Python-Real-World-Actionable/dp/148422387X)，實作了一遍書中介紹的各種NLP操作，並將結果以視覺化的圖表呈現。由於原作者已經提供了完整[程式碼](https://github.com/dipanjanS/text-analytics-with-python)，這裡就只簡單記錄一些結果，而不寫出完整程式碼。
+
+> 補記：這本書2019年出了[第二版](https://www.amazon.com/Text-Analytics-Python-Practitioners-Processing/dp/1484243536)，內容大致上差不多，主要的區別是：
+> + 舊版使用Python2，新版使用Python3 
+> + 新版增加了一個章節講深度學習 
+> + 新版提到比較多可視化的工具
 
 ### 主要工具
   + `NLTK`
