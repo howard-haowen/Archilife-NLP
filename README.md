@@ -171,7 +171,7 @@ for item in tr4s.get_key_sentences(num=5):
 [![CH_NER_words__characteristics](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_NER_words_characteristics.png)](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)
 
 ### 依據英文文本
-- __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromEN.html.html)__ - 文類1 vs. 文類2
+- __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromEN.html)__ - 文類1 vs. 文類2
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_characteristic_fromEN.html)__ - 特徵詞 vs. 文類
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_scattertext_fromEN_NER_Label.html)__ - 文類1 vs. 文類2
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromEN_NER_Label.html)__ - 特徵詞 vs. 文類
