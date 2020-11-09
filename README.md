@@ -211,7 +211,7 @@ preprocessing.scale(word_vectors_pca) #標準化，達到zero mean跟unit varian
 ```
 - __[前1000高頻詞，t-SNE降階](https://howard-haowen.github.io/Archilife-NLP/word2vec_tsne_most_frequent_1000tokens.html)__ - 用`gensim` 的Word2Vec模型訓練文本，獲得32階的向量，取高頻的前1000詞，再用t-SNE降階之後用 `bokeh` 繪圖。
 ---
-[![top1000_word2vec](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/top1000_word2vec_tsne.png)](https://howard-haowen.github.io/Archilife-NLP/word2vec_tsne_most_frequent_1000tokens.html)
+<!---[![top1000_word2vec](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/top1000_word2vec_tsne.png)](https://howard-haowen.github.io/Archilife-NLP/word2vec_tsne_most_frequent_1000tokens.html)--->
 
 設定跟上面一樣，只是把PCA換成t-SNE，具體程式碼如下：
 ```python
