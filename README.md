@@ -145,23 +145,14 @@ for item in tr4s.get_key_sentences(num=5):
 
 ### 依據中文文本
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)__ - 文類1 vs. 文類2
----
 <!---[![CH_all_words_text_classes](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_all_words_text_classes.png)](https://howard-haowen.github.io/Archilife-NLP/term_scattertext_fromCH_CleanTokens.html)--->
-
 - __[所有詞](https://howard-haowen.github.io/Archilife-NLP/term_characteristic_fromCH_CleanTokens.html)__ - 特徵詞 vs. 文類
----
 <!---[![CH_all_words_characteristics](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_all_words_characteristics.png)](https://howard-haowen.github.io/Archilife-NLP/term_characteristic_fromCH_CleanTokens.html)--->
-
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_scattertext_fromCH_NER_Label.html)__ - 文類1 vs. 文類2
----
 <!---[![CH_NER_words_text_classes](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_NER_words_text_classes.png)](https://howard-haowen.github.io/Archilife-NLP/NER_scattertext_fromCH_NER_Label.html)--->
-
 - __[命名實體詞](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)__ - 特徵詞 vs. 文類
----
 <!---[![CH_NER_words__characteristics](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/CH_NER_words_characteristics.png)](https://howard-haowen.github.io/Archilife-NLP/NER_characteristic_fromCH_NER_Label.html)--->
-
 - __[前1000高頻詞，PCA降階](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)__ - 用`gensim` 的Word2Vec模型訓練文本，獲得32階的向量，取高頻的前1000詞，再用PCA降階之後用 `bokeh` 繪圖。
----
 <!---[![top1000_word2vec](https://github.com/howard-haowen/Archilife-NLP/blob/gh-pages/top1000_word2vec_pca.png)](https://howard-haowen.github.io/Archilife-NLP/word2vec_pca_most_frequent_1000tokens.html)--->
 
 具體設定如下：
