@@ -1,5 +1,3 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhoward-haowen%2FArchilife-NLP&count_bg=%2367E805&title_bg=%23555555&icon=grav.svg&icon_color=%2367E805&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
-
 # 自然語言處理可視化(NLP visualization demo)
 
 ## 目錄
